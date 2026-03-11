@@ -1,0 +1,71 @@
+.editor-layer-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: all;
+    z-index: 10;
+}
+
+.text-item-group {
+    pointer-events: all;
+    cursor: text;
+}
+
+.text-bounding-box {
+    fill: transparent;
+    stroke: transparent;
+    stroke-width: 1px;
+    rx: 2px;
+    transition: stroke 0.15s ease, fill 0.15s ease;
+}
+
+.text-item-group:hover .text-bounding-box {
+    fill: rgba(59, 130, 246, 0.08);
+    stroke: rgba(59, 130, 246, 0.45);
+}
+
+.text-bounding-box.active {
+    fill: rgba(59, 130, 246, 0.14);
+    stroke: rgba(59, 130, 246, 0.75);
+}
+
+.text-overlay-bg {
+    fill: rgba(255, 255, 255, 0.95);
+    rx: 2px;
+}
+
+.text-overlay-value {
+    fill: #111827;
+    dominant-baseline: alphabetic;
+    pointer-events: none;
+}
+
+.editable-text-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid rgba(59, 130, 246, 0.7);
+    border-radius: 3px;
+    padding: 1px 2px;
+}
+
+.editable-text-container.active {
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.pdf-text-input {
+    background: white;
+    border: none;
+    color: #111827;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1.2;
+    width: 100%;
+}
+
+.pdf-text-input:focus {
+    background: white;
+}
